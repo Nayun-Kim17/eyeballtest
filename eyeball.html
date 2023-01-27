@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Eyeball Test</title>
+    <script src="https://unpkg.com/@rive-app/canvas@1.0.98"></script>
+    <style type="text/css">
+      body{
+        height: 100vh;
+        background-color: orange;
+        display:grid;
+        justify-content: center;
+        transition: background-color 1s;
+      }
+      canvas{
+        margin-top:-5em;
+        margin-bottom: -3em;
+        pointer-events: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <canvas id="canvas" width="500" height="500"> </canvas>
+    </div>
+
+
+    <script>
+        new rive.Rive({
+            src: "eyeball.riv",
+            canvas: document.getElementById("canvas"),
+            autoplay: true
+        });
+    </script>
+  </body>
+</html>
